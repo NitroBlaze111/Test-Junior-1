@@ -25,7 +25,7 @@ func CalculateAverage(readings []models.AirQualityReading) map[string]float64 {
 // FindHighestPollutantByHour finds the highest average pollutant per hour
 // FindHighestPollutantByHour finds the pollutant with the highest average value for each hour
 func FindHighestPollutantByHour(readings []models.AirQualityReading) map[int]string {
-	// แผนที่เก็บข้อมูลของสารมลพิษตามชั่วโมง
+	
 	hourlyData := make(map[int]map[string]float64)
 	hourlyCount := make(map[int]map[string]int)
 
@@ -46,7 +46,7 @@ func FindHighestPollutantByHour(readings []models.AirQualityReading) map[int]str
 		hourlyCount[hour]["co2"]++
 	}
 
-	// แผนที่สำหรับเก็บสารมลพิษที่มีค่าเฉลี่ยสูงสุดในแต่ละชั่วโมง
+	
 	highestPollutantByHour := make(map[int]string)
 
 	// คำนวณหาสารมลพิษที่มีค่าเฉลี่ยสูงสุดในแต่ละชั่วโมง
